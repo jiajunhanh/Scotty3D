@@ -6,15 +6,15 @@ The current version of the starter code is available at https://github.com/CMU-G
 
 User documentation and example works are available at https://cmu-graphics.github.io/Scotty3D-docs/ .
 
+Note that the source code is in a private repository since this project is an assignment for students, and I want to avoid posting the solutions publicly. 
+
+If you are not a student from CMU and are interested in the implementation, please feel free to contact me.
+
 <img src="./media/results/path_tracer/gold_bunny.png" alt="isolated">
 
 ## What I implemented
 
 I implemented all required functionalities except for A4T4, which consist of Assignment 1: Rasterizer, Assignment2: Mesh Editing, Assignment3: Path Tracing, and Assignment4: Animation. Additionally, I implemented the microfacet model described in [Real Shading in Unreal Engine 4](https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf), which takes 4 parameters: base color, specular color, roughness and metallic.
-
-Note that the source code is in a private repository since this project is an assignment for students, and I want to avoid posting the solutions publicly. 
-
-If you are not a student from CMU and are interested in the implementation, please feel free to contact me.
 
 ### Rasterizer
 In this part, I implemented a software rasterizer that simulates the OpenGL pipelines. The rasterizer takes arrays of vertices as input,  and outputs the rendered images. The rasterizer supports triangle clipping, alpha blending, depth testing, and supersampling. It can also generate mip-maps from textures and perform tri-linear sampling with lod determined by derivatives. Note that instead of compiling GLSL files, we hardcode the vertex and fragment shaders in ./src/rasterizer/programs.h.
